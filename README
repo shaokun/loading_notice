@@ -9,12 +9,11 @@ HOWTO
 =====
  
 1. Install the plugin:
-    copy loading-notice.js to your javascript directly
-    
-    TODO: make it as a real rails plugin
+		$ ruby script/plugin install git://github.com/shaokun/loading-notice.git
+		$ rake loading_notice:install
     
 2. Include the library into your project:
-    <%= javascript_include_tag 'prototype', 'loading-notice' %>
+    <%= javascript_include_tag 'prototype', 'loading_notice' %>
  
 3. Add a "loading" div and initialize a javascript object:
     <div id="loading" style="display: none">Loading...</div>

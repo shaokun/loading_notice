@@ -9,8 +9,8 @@ namespace :loading_notice do
 
   desc 'Installs required javascript and stylesheet files to the public/ directory.'
   task :install do
-    FileUtils.cp Dir[PLUGIN_ROOT + '/assets/javascripts/*.js'], RAILS_ROOT + '/public/javascripts'
-    FileUtils.cp Dir[PLUGIN_ROOT + '/assets/stylesheets/*.css'], RAILS_ROOT + '/public/stylesheets'
+    FileUtils.cp Dir[PLUGIN_ROOT + '/javascripts/*.js'], RAILS_ROOT + '/public/javascripts'
+    FileUtils.cp Dir[PLUGIN_ROOT + '/stylesheets/*.css'], RAILS_ROOT + '/public/stylesheets'
   end
 
   desc 'Removes the javascript and stylesheet for the plugin.'

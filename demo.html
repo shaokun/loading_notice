@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Loading Notice example</title>
+ 
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("prototype", "1.6.0.2");  
+    google.load("scriptaculous", "1.8.1");
+  </script>
+  <script type="text/javascript" src="loading-notice.js"></script>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			window.loading_notice = new LoadingNotice("loading");
+			loading_notice.showLoading();
+		}
+	</script>
+
+<style>
+body {
+	height: 1000px;
+}
+#loading {
+	font-size: 110%;
+	background-color: #900;
+	width: 90px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	z-index: 100001;
+	padding: 4px;
+	color: white;
+	text-align: center;
+}
+</style>
+
+</head>
+ 
+<body>
+	<div id="loading" style="display: none">Loading...</div>
+</body>
+
+</html>

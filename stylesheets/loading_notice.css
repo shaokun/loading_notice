@@ -1,0 +1,12 @@
+#loading {
+	font-size: 110%;
+	background-color: #900;
+	width: 90px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	z-index: 100001;
+	padding: 4px;
+	color: white;
+	text-align: center;
+}

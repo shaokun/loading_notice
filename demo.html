@@ -11,7 +11,8 @@
     google.load("scriptaculous", "1.8.1");
   </script>
   <script type="text/javascript" src="javascripts/loading_notice.js"></script>
-
+	<link href="	stylesheets/loading_notice.css" media="screen" rel="stylesheet" type="text/css" />
+	
 	<script type="text/javascript">
 		window.onload = function() {
 			window.loading_notice = new LoadingNotice("loading");
@@ -19,28 +20,16 @@
 		}
 	</script>
 
-<style>
-body {
-	height: 1000px;
-}
-#loading {
-	font-size: 110%;
-	background-color: #900;
-	width: 90px;
-	position: absolute;
-	right: 1px;
-	top: 1px;
-	z-index: 100001;
-	padding: 4px;
-	color: white;
-	text-align: center;
-}
-</style>
+	<style type="text/css">
+	body {
+		height: 1000px;
+	}
+	</style>
 
 </head>
  
 <body>
-	<div id="loading" style="display: none">Loading...</div>
+	<div id="loading" style="display: none">Loading...</div>	
 </body>
 
 </html>

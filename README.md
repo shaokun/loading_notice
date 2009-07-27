@@ -10,7 +10,7 @@ HOWTO
  
 1. Install the plugin:
 
-    $ ruby script/plugin install git://github.com/shaokun/loading_notice.git
+    $ ruby script/plugin install git://github.com/thomd/loading_notice.git
 
     $ rake loading_notice:install
     

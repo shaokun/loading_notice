@@ -3,7 +3,6 @@ LoadingNotice
 
 Loading Notice is a plugin, built on Prototype, which shows an indictor when a slow AJAX is under process automatically. Basically, it's like the "Loading" div appears in gmail when busy. When the users scroll or resize the window, it will still keep showing on the top of the page.
 
- 
 
  
 Howto
@@ -11,7 +10,7 @@ Howto
  
 Installation of the plugin:
 
-    $ ruby script/plugin install git://github.com/shaokun/loading_notice.git
+    $ ruby script/plugin install git://github.com/thomd/loading_notice.git
     $ rake loading_notice:install
     
 Include the library into your project:
@@ -21,14 +20,12 @@ Include the library into your project:
 		 
 
 
-
 Demo
 ----
 
 Use the [loading-notice-demo template](http://gist.github.com/156145) (for rails >= 2.3) to generate a fully functional proof-of-concept of the loading_notice plugin:
 
     $ rails loading-notice-demo -m http://gist.github.com/156145.txt
-
 
 
  

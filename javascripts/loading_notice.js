@@ -1,7 +1,7 @@
 var LoadingNotice = Class.create({
-	initialize: function(id) {
+	initialize: function() {
 		this.loaded = false;
-		this.loading = $(id);
+		this.loading = this.buildLoader();
 		
 		Ajax.Responders.register({
 	    	"onCreate": this.startLoading.bind(this),
@@ -9,6 +9,12 @@ var LoadingNotice = Class.create({
 			"onException": this.stopLoading.bind(this)
 	  	});	
 	},
+
+    buildLoader: function(){
+        var loader = new Element('div', {'id': 'loading'}).update("Loading ...").hide();
+        document.body.appendChild(loader);
+        return loader;
+    },
 
   	startLoading: function() {
     	this.loaded = false;
@@ -18,7 +24,6 @@ var LoadingNotice = Class.create({
   	showLoading: function() {
     	if (!this.loaded) {
 			this.positionLoading();
-			
 	       	new Effect.Appear(this.loading.id, {duration: 0.5});
 	
 			// document.observe('resize', this.positionLoading.bind(this));
@@ -45,3 +50,8 @@ var LoadingNotice = Class.create({
 		window.onscroll = null;
   	}
 });
+
+document.observe("dom:loaded", function() {
+    new LoadingNotice();
+});
+

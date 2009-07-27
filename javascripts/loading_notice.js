@@ -18,7 +18,7 @@ var LoadingNotice = Class.create({
 
     startLoading: function() {
         this.loaded = false;
-        window.setTimeout(this.showLoading.bind(this), 200);
+        this.timeout = window.setTimeout(this.showLoading.bind(this), 200);
     },
 
     showLoading: function() {
@@ -42,6 +42,7 @@ var LoadingNotice = Class.create({
     },
 
     stopLoading: function() {
+        window.clearTimeout(this.timeout);
         this.loading.hide();
         this.loaded = true;
 
